@@ -1,14 +1,34 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Supprimer toutes les références à Tailwind */
+.app-container {
+  min-height: 100vh;
+}
 
-/* Styles de base personnalisés */
-@layer base {
-  body {
-    @apply font-sans antialiased;
-  }
-  
-  code {
-    @apply font-mono;
+.stock-page {
+  padding: 20px;
+}
+
+/* Styles de base */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-danger {
+  color: #dc3545;
+}
+
+/* Animation pour les entrées/sorties */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.table-row {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .table-responsive {
+    overflow-x: auto;
   }
 }
